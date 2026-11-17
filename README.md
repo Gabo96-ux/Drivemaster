@@ -45,7 +45,7 @@ Follow these steps to run the project locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Gabo96-ux/Drivemaster 
 ```
 
 ### 2. Navigate into the Project
