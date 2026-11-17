@@ -1,0 +1,55 @@
+.process {
+  background: var(--bg-black);
+  padding: 8rem 0;
+}
+
+.process__inner {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.process-timeline {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.process-step {
+  flex: 1 1 180px;
+  text-align: left;
+}
+
+.step-marker {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.step-number {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--red);
+  margin-right: 1rem;
+}
+
+.step-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.step-content h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.step-content p {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

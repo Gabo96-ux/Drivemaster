@@ -1,0 +1,299 @@
+/* ===== Dashboard HUD Navbar – Refined & Responsive ===== */
+.hud-nav {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1300px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.hud-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 66px;
+  border-radius: 20px;
+}
+
+.hud-nav--scrolled .glass {
+  background: rgba(10, 10, 10, 0.9);
+  border-color: var(--red);
+  box-shadow: 0 0 20px rgba(225, 6, 0, 0.15);
+}
+
+/* Logo */
+.hud-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.tach-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tach-icon {
+  color: var(--white);
+}
+
+.tach-arc {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--red);
+  border-radius: 50%;
+  animation: spin-arc 3s linear infinite;
+}
+
+@keyframes spin-arc {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--white);
+}
+
+.logo-red {
+  color: var(--red);
+}
+
+/* Desktop links */
+.hud-nav__links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hud-nav__link {
+  color: var(--gray-mid);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 0.4rem 0;
+  transition: color 0.3s;
+}
+
+.hud-nav__link:hover {
+  color: var(--white);
+}
+
+.hud-nav__link--active {
+  color: var(--white);
+}
+
+.link-indicator {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--red-glow);
+}
+
+/* ---- Auth Actions (Desktop) ---- */
+.hud-nav__actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Logged‑in user menu */
+.hud-nav__user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hud-nav__user-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.hud-nav__user-link:hover {
+  color: var(--red);
+}
+
+.hud-nav__logout-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--white);
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.hud-nav__logout-btn:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+/* Logged‑out: Sign In + Book Now */
+.hud-nav__auth-group {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.hud-nav__login-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+  transition: all 0.3s;
+}
+
+.hud-nav__login-link:hover {
+  border-color: var(--red);
+  background: rgba(229, 6, 20, 0.1);
+  color: var(--red);
+}
+
+/* Book Now button (unchanged) */
+.hud-nav__cta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--red);
+  color: var(--white);
+  padding: 0.6rem 1.6rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(225, 6, 0, 0.5);
+}
+
+.hud-nav__cta:hover {
+  background: var(--red-glow);
+  box-shadow: 0 0 25px rgba(255, 42, 42, 0.8);
+  transform: translateY(-1px);
+}
+
+/* Mobile toggle */
+.hud-nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Mobile menu */
+.hud-mobile {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 100%;
+  max-width: 360px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-15px);
+  transition: all 0.3s ease;
+}
+
+.hud-mobile--open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hud-mobile__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.hud-mobile__link {
+  color: var(--gray-mid);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.hud-mobile__link--active,
+.hud-mobile__link:hover {
+  color: var(--red);
+}
+
+/* Mobile auth area (inside the slide‑out menu) */
+.hud-mobile__auth {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.hud-mobile__auth .hud-nav__cta {
+  width: fit-content;
+  margin-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hud-nav__links,
+  .hud-nav__actions {
+    display: none;
+  }
+  .hud-nav__toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .hud-nav {
+    top: 12px;
+  }
+  .hud-nav__inner {
+    padding: 0 1.2rem;
+    height: 58px;
+  }
+}

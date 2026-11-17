@@ -1,0 +1,153 @@
+.admin-dashboard {
+  background: var(--bg-black);
+  min-height: 100vh;
+  padding: 120px 5% 4rem;
+  color: #fff;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.admin-tab {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.7);
+  padding: 0.7rem 1.8rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.admin-tab--active {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.admin-content {
+  max-width: 1200px;
+}
+
+.admin-section h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.admin-form input,
+.admin-form textarea {
+  background: var(--surface-dark);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+  border-color: var(--red);
+  outline: none;
+}
+
+.admin-btn {
+  background: var(--red);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: flex-start;
+}
+
+.admin-btn:hover {
+  background: #ff2a2a;
+}
+
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface-dark);
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+}
+
+.admin-list-item span {
+  font-weight: 500;
+}
+
+.admin-list-item button {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-list-item button:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.admin-list-item button.danger {
+  border-color: var(--red);
+}
+
+.admin-list-item button.danger:hover {
+  background: var(--red);
+}
+
+.bookings-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin-table th {
+  color: var(--red);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.admin-table td {
+  color: rgba(255,255,255,0.8);
+}

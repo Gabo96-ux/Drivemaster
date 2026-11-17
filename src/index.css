@@ -1,0 +1,38 @@
+:root {
+  --bg-black: #0A0A0A;
+  --surface-dark: #121212;
+  --card-bg: #1A1A1A;
+  --red: #E10600;         /* F1 / Toyota red */
+  --red-glow: #FF2A2A;
+  --white: #FFFFFF;
+  --gray-light: #AAAAAA;
+  --gray-mid: #666666;
+  --border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(18, 18, 18, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-black);
+  color: var(--white);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}

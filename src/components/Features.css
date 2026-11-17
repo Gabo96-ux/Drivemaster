@@ -1,0 +1,39 @@
+.features {
+  background: var(--surface-dark);
+  padding: 8rem 0;
+}
+
+.features__inner {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 3rem;
+}
+
+.feature-item {
+  text-align: center;
+  color: #fff;
+}
+
+.feature-icon {
+  color: var(--red);
+  margin-bottom: 1.5rem;
+}
+
+.feature-item h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.feature-item p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

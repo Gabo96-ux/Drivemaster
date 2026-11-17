@@ -1,0 +1,104 @@
+.pricing-page {
+  background: var(--bg-black);
+  min-height: 100vh;
+  padding: 120px 0 4rem;
+}
+
+.pricing-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.price-card {
+  background: var(--surface-dark);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+}
+
+.price-card--popular {
+  border-color: var(--red);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--red);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.3rem 1.2rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.price-card h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.price-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.price-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.price-features li svg {
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.price-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 0.8rem 2.5rem;
+  border-radius: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.price-card--popular .price-btn {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.price-btn:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
